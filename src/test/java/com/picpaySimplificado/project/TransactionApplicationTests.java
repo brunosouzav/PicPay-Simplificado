@@ -48,9 +48,8 @@ class TransactionApplicationTests {
 
     @BeforeEach
     void setUp() {
-        MockitoAnnotations.openMocks(this); // Inicializa os mocks
+        MockitoAnnotations.openMocks(this); 
 
-        // Criando o remetente (sender) e destinatário (receiver)
         sender = new User(
             1L, 
             "John", 
