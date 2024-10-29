@@ -19,7 +19,7 @@ import com.picpaySimplificado.project.services.UserService;
 import com.picpaySimplificado.project.services.exceptions.InsufficientBalanceException;
 
 
-class ProjectApplicationTests {
+class UserApplicationTests {
 	
 	@Mock
 	private UserRepository repository;
@@ -57,4 +57,6 @@ class ProjectApplicationTests {
 
 	       assertEquals("Insufficient balance", exception.getMessage());
 	   }
+
+	   
 }
