@@ -1,5 +1,6 @@
 package com.picpaySimplificado.project.entites;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -21,8 +22,11 @@ import lombok.Setter;
 @Getter
 @Setter
 @EqualsAndHashCode(of = "id")
-public class Transaction {
+public class Transaction implements Serializable{
 	
+	
+	private static final long serialVersionUID = 1L;
+
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

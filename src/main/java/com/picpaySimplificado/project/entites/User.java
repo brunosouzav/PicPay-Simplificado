@@ -1,7 +1,9 @@
 package com.picpaySimplificado.project.entites;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
+import com.picpaySimplificado.project.dtos.UserDTO;
 import com.picpaySimplificado.project.enuns.UserRole;
 
 import jakarta.persistence.Column;
@@ -25,8 +27,11 @@ import lombok.Setter;
 @Getter
 @Setter
 @EqualsAndHashCode(of = "id")
-public class User {
+public class User implements Serializable {
 	
+	
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -48,4 +53,16 @@ public class User {
 	@Enumerated(EnumType.STRING)
 	private UserRole role;
 	
+	public User(UserDTO user) {
+		this.fisrtName = user.firtsName();
+		this.lastName = user.lastName();
+		this.document = user.document();
+		this.email = user.email();
+		this.password = user.password();
+		this.balance = user.balance();
+		this.role = user.role();
+		
+	
+	}
+
 }
