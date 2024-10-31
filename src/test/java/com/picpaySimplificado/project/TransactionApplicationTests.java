@@ -80,7 +80,7 @@ class TransactionApplicationTests {
         when(userService.findById(1L)).thenReturn(sender);
         when(userService.findById(2L)).thenReturn(receiver);
 
-        transactionService.createdTransaction(transactionDto);
+        transactionService.createTransaction(transactionDto);
 
         verify(userService).validateTransaction(sender, new BigDecimal("30.00"));
         verify(transactionRepository).save(any(Transaction.class));

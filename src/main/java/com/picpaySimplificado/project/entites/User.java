@@ -36,7 +36,7 @@ public class User implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private String fisrtName;
+	private String firstName;
 	
 	private String lastName;
 	
@@ -54,7 +54,7 @@ public class User implements Serializable {
 	private UserRole role;
 	
 	public User(UserDTO user) {
-		this.fisrtName = user.firtsName();
+		this.firstName = user.firstName();
 		this.lastName = user.lastName();
 		this.document = user.document();
 		this.email = user.email();

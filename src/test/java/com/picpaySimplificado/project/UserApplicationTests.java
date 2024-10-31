@@ -1,6 +1,7 @@
 package com.picpaySimplificado.project;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -16,7 +17,7 @@ import com.picpaySimplificado.project.entites.User;
 import com.picpaySimplificado.project.enuns.UserRole;
 import com.picpaySimplificado.project.repositories.UserRepository;
 import com.picpaySimplificado.project.services.UserService;
-import com.picpaySimplificado.project.services.exceptions.InsufficientBalanceException;
+import com.picpaySimplificado.project.services.execeptions.InsufficientBalanceException;
 
 
 class UserApplicationTests {
@@ -34,7 +35,7 @@ class UserApplicationTests {
 	        MockitoAnnotations.openMocks(this); 
 	        user = new User();
 	        user.setId(1L);
-	        user.setFisrtName("Bruno");
+	        user.setFirstName("Bruno");
 	        user.setBalance(new BigDecimal("100.00"));
 	        user.setRole(UserRole.COMMON);
 	    }
@@ -51,7 +52,7 @@ class UserApplicationTests {
 	   void testValidateTransaction_InsufficientBalance() {
 	       BigDecimal amount = new BigDecimal("150.00");  
 	       Exception exception = assertThrows(
-	           InsufficientBalanceException.class,
+	           InsufficientBalanceException.class,  
 	           () -> service.validateTransaction(user, amount)
 	       );
 

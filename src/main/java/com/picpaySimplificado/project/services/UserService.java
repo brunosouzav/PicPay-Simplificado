@@ -10,9 +10,9 @@ import com.picpaySimplificado.project.dtos.UserDTO;
 import com.picpaySimplificado.project.entites.User;
 import com.picpaySimplificado.project.enuns.UserRole;
 import com.picpaySimplificado.project.repositories.UserRepository;
-import com.picpaySimplificado.project.services.exceptions.InsufficientBalanceException;
-import com.picpaySimplificado.project.services.exceptions.UnauthorizedTransactionException;
-import com.picpaySimplificado.project.services.exceptions.UserNotFoundException;
+import com.picpaySimplificado.project.services.execeptions.UnauthorizedTransactionException;
+import com.picpaySimplificado.project.services.execeptions.InsufficientBalanceException;
+import com.picpaySimplificado.project.services.execeptions.UserNotFoundException;
 
 @Service
 public class UserService {

@@ -16,6 +16,8 @@ public class NotificationService {
 	private RestTemplate restTemplate;
 	
 	public void sendNotification(User user, String mensage) throws Exception {
+		/* 
+		
 		String email = user.getEmail();
 		NotificationDTO notificationRequest = new NotificationDTO(email, mensage);
 		
@@ -24,6 +26,7 @@ public class NotificationService {
 	
 		if (!(notificationResponse.getStatusCode() ==  HttpStatus.OK)) {
 			throw new Exception("Serviço de notificação fora do ar");
+		*/
 		}
 	}
-}
+
